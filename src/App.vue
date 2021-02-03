@@ -1,32 +1,27 @@
 <template>
-  <div id="app">
+  <div id="app" class="font-poppins">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <nav-bar />
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
-<style>
+<script>
+import NavBar from "./components/NavBar.vue";
+export default {
+  name: "App",
+  components: {
+    NavBar,
+  },
+};
+</script>
+
+<style scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  position: relative;
+  height: 12000px;
+  background: linear-gradient(163.67deg, #6b0000 -70.7%, #000000 26.15%);
 }
 </style>
+
