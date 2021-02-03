@@ -75,8 +75,8 @@
             >
               <icon-svg class="mt-6" name="download" width="28" height="28" />
             </div>
-            <div class="md:w-1/1 px-3">
-              <div class="text-white text-lg lg:mt-6">Download CV</div>
+            <div class="md:w-1/2 px-3">
+              <div class="text-white text-lg mt-6">Download CV</div>
             </div>
           </div>
         </div>
