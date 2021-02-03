@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class="md:w-1/1 px-3 lg:mt-24 md:ml-24 md:mt-18 content-top">
+        <div class="md:w-1/1 px-3 lg:mt-24 lg:ml-24 md:ml-12 md:mt-18 content-top">
           <div class="text-red-600 text-3xl mb-3">
             Hi, I'm Ilham Fatiri
           </div>
