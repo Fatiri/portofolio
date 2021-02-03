@@ -14,36 +14,45 @@
             <div
               class="md:w-1/1 px-3 custome-download-icon-sosmed transform transition duration-500 hover:scale-125"
             >
-              <icon-svg
-                class="mt-2 "
-                name="github"
-                width="34"
-                height="34"
-              />
+              <a href="https://github.com/Fatiri" target="_blank">
+                <icon-svg class="mt-2" name="github" width="34" height="34" />
+              </a>
             </div>
-            <div class="md:w-1/1 px-3 custome-download-icon-sosmed transform transition duration-500 hover:scale-125">
-              <icon-svg
-                class="mt-2 ml-10"
-                name="linkedin"
-                width="34"
-                height="34"
-              />
+            <div
+              class="md:w-1/1 px-3 custome-download-icon-sosmed transform transition duration-500 hover:scale-125"
+            >
+              <a href="https://www.linkedin.com/in/fatiri" target="_blank">
+                <icon-svg
+                  class="mt-2 ml-10"
+                  name="linkedin"
+                  width="34"
+                  height="34"
+                />
+              </a>
             </div>
-            <div class="md:w-1/1 px-3 custome-download-icon-sosmed transform transition duration-500 hover:scale-125">
-              <icon-svg
-                class="mt-2 ml-10"
-                name="instagram"
-                width="34"
-                height="34"
-              />
+            <div
+              class="md:w-1/1 px-3 custome-download-icon-sosmed transform transition duration-500 hover:scale-125"
+            >
+              <a href="https://www.instagram.com/ifatiri" target="_blank">
+                <icon-svg
+                  class="mt-2 ml-10"
+                  name="instagram"
+                  width="34"
+                  height="34"
+                />
+              </a>
             </div>
-            <div class="md:w-1/1 px-3 custome-download-icon-sosmed transform transition duration-500 hover:scale-125">
-              <icon-svg
-                class="mt-2 ml-10"
-                name="whatsup"
-                width="34"
-                height="34"
-              />
+            <div
+              class="md:w-1/1 px-3 custome-download-icon-sosmed transform transition duration-500 hover:scale-125"
+            >
+              <a href="https://wa.link/e1raiy" target="_blank">
+                <icon-svg
+                  class="mt-2 ml-10"
+                  name="whatsup"
+                  width="34"
+                  height="34"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -51,19 +60,20 @@
           <div class="text-red-600 text-3xl mb-3">Hi, I'm Ilham Fatiri</div>
           <div class="text-white text-4xl">Software Engineer</div>
           <div class="text-white text-4xl">At Lion Parcel</div>
-         <p class="mt-2 text-gray-500 lg:text-1xl md:text-sm mt-4">
-           &nbsp;&nbsp;&nbsp;I am a graduate of the Bootcamp Enigma Academy, I am educated not<br>
+          <p class="mt-2 text-gray-500 lg:text-1xl md:text-sm mt-4">
+            &nbsp;&nbsp;&nbsp;I am a graduate of the Bootcamp Enigma Academy, I
+            am educated not<br />
             only to be someone who has knowledge in the field of software
-            engineer, <br>but also to become someone who has character,and can be
-            useful to many people. <br> One of my current dreams,wants to surpass
-            one of my teachers.
+            engineer, <br />but also to become someone who has character,and can
+            be useful to many people. <br />
+            One of my current dreams,wants to surpass one of my teachers.
           </p>
 
           <div class="-mx-3 md:flex mb-6">
             <div
               class="md:w-1/1 custome-download-icon px-3 mb-6 md:mb-0 underline ..."
             >
-              <icon-svg class="mt-6"  name="download" width="28" height="28" />
+              <icon-svg class="mt-6" name="download" width="28" height="28" />
             </div>
             <div class="md:w-1/1 px-3">
               <div class="text-white text-lg lg:mt-6">Download CV</div>
