@@ -42,7 +42,7 @@
     <svg
       v-if="name === 'linkedin'"
       xmlns="http://www.w3.org/2000/svg"
-      fill="white"
+      fill="#918e96"
       :width="width"
       :height="height"
       viewBox="0 0 24 24"
@@ -54,7 +54,7 @@
     <svg
       v-if="name === 'instagram'"
       xmlns="http://www.w3.org/2000/svg"
-      fill="white"
+      fill="#918e96"
       :width="width"
       :height="height"
       viewBox="0 0 24 24"
@@ -67,7 +67,7 @@
     <svg
       v-if="name === 'github'"
       xmlns="http://www.w3.org/2000/svg"
-      fill="white"
+      fill="#918e96"
       :width="width"
       :height="height"
       viewBox="0 0 24 24"
@@ -81,7 +81,7 @@
     <svg
       v-if="name === 'whatsup'"
       xmlns="http://www.w3.org/2000/svg"
-      fill="white"
+      fill="#918e96"
       :width="width"
       :height="height"
       viewBox="0 0 24 24"
