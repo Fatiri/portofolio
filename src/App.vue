@@ -21,7 +21,7 @@ export default {
 #app {
   position: relative;
   height: 12000px;
-  background: linear-gradient(163.67deg, #6b0000 -70.7%, #000000 26.15%);
+  background: linear-gradient(150.67deg, #05e7d475 -90.7%, #000000 20.15%);
 }
 </style>
 
