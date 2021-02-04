@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="grid grid-rows-3 grid-flow-col gap-6">
+    <div class="grid grid-rows-1 grid-flow-col gap-6">
       <div
         class="-mx-3 md:flex mb-6 items-center mt-16 justify-center lg:ml-24 md:ml-24"
       >
@@ -100,37 +100,38 @@ export default {
 <style scoped>
 .profile {
   width: 320px;
-  height: 360px;
+  height: 350px;
   filter: blur(2px);
   -webkit-filter: blur(4px);
-  background: rgba(41, 22, 22, 0.54);
+  background: rgba(22, 41, 38, 0.54);
   box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.25);
 }
 
 @media(max-width: 640px) {
   .profile {
   width: 320px;
-  height: 360px;
+  height: 350px;
   margin-left: 15px;
   filter: blur(2px);
   -webkit-filter: blur(4px);
-  background: rgba(41, 22, 22, 0.54);
+  background: rgba(41, 22, 22, 0.247);
   box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.25);
 }
 .line-profile {
-  height: 2px;
+  height: 4px;
   width: 320px;
   margin-left: 15px;
   background-color: white;
-  margin-top: -7.8px;
+  margin-top: -8px;
 }
 
 .profile-image {
   float: inline-start;
   align-items: fixed;
-  margin-top: -385px;
+  margin-top: -375px;
   margin-left: 50px;
   width: 240px;
+  transform: rotate(-2deg);
   height: 380px;
   filter: blur(0px);
   -webkit-filter: blur(0px);
@@ -146,11 +147,12 @@ export default {
 .profile-image {
   float: inline-start;
   align-items: fixed;
-  margin-top: -385px;
+  margin-top: -375px;
   width: 240px;
   height: 380px;
   margin-left: 36px;
   filter: blur(0px);
+  transform: rotate(-1deg);
   -webkit-filter: blur(0px);
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -167,15 +169,17 @@ export default {
   50% {
     transform: translateX(-20px);
   }
-  50% {
-    transform: translateX(15px);
+  50%{
+    transform: rotate(-1deg);
   }
+  50% {
+    transform: translateX(15px);  }
   100% {
     transform: translateY(0);
   }
 }
 .line-profile {
-  height: 2px;
+  height: 4px;
   width: 320px;
   background-color: white;
   margin-top: -7.8px;
