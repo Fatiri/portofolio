@@ -13,7 +13,7 @@
           :class="{ 'shadow-lg pb-10': isMobileDevice() }"
         >
           <div :class="{ 'px-6 ': isMobileDevice() }">
-            <div class="profile"></div>
+            <div class="profile shadow-md"></div>
             <img
               class="profile-image bounce"
               src="../assets/svg/me.png"
@@ -134,8 +134,8 @@ export default {
   width: 320px;
   height: 350px;
   filter: blur(2px);
-  -webkit-filter: blur(4px);
-  background: rgba(22, 41, 38, 0.158);
+  -webkit-filter: blur(20px);
+  background: rgba(230, 225, 225, 0.158);
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -146,7 +146,7 @@ export default {
     margin-left: 15px;
     filter: blur(2px);
     -webkit-filter: blur(4px);
-    background: rgba(41, 22, 22, 0.055);
+    background: rgba(114, 98, 98, 0.055);
     box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.062);
   }
   .line-profile {
