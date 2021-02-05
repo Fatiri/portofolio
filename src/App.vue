@@ -2,26 +2,34 @@
   <div id="app" class="font-poppins">
     <div id="nav">
       <nav-bar />
+      <hero />
     </div>
-    <router-view />
+    <skill />
+    <service-client />
   </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
+import Hero from "./views/Hero.vue";
+import Skill from "./views/Skill.vue";
+import ServiceClient from "./views/ServiceClient.vue";
 export default {
   name: "App",
   components: {
     NavBar,
+    Hero,
+    Skill,
+    ServiceClient,
   },
 };
 </script>
 
 <style scoped>
 #app {
+  height: 1900px;
   position: relative;
-  height: 12000px;
-  background: linear-gradient(150.67deg, #05e7d475 -90.7%, #000000 20.15%);
+  background: linear-gradient(176.67deg, #0be4d613 -140.7%, #242323 5.15%);
 }
 </style>
 
