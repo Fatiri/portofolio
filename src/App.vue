@@ -1,12 +1,14 @@
 <template>
-  <div id="app" class="font-poppins pb-64">
+  <div id="app" class="font-poppins">
     <div id="nav">
       <nav-bar />
       <hero />
     </div>
     <skill />
     <service-client />
-    <contact/>
+    <contact />
+    <contact-us />
+    <footer-bar />
   </div>
 </template>
 
@@ -16,6 +18,8 @@ import Hero from "./views/Hero.vue";
 import Skill from "./views/Skill.vue";
 import ServiceClient from "./views/ServiceClient.vue";
 import Contact from "./views/Contact.vue";
+import ContactUs from "./views/ContactUs.vue";
+import FooterBar from "./components/FooterBar.vue";
 export default {
   name: "App",
   components: {
@@ -23,7 +27,9 @@ export default {
     Hero,
     Skill,
     ServiceClient,
-    Contact
+    Contact,
+    ContactUs,
+    FooterBar,
   },
 };
 </script>

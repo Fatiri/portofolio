@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 "
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"
     :class="{ 'pb-1': isMobileDevice(), 'pb-2': isDesktopDevice() }"
   >
     <div class="grid grid-rows-1 grid-flow-col gap-6">

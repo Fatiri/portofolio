@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 shadow-md bg-white bg-opacity-5 rounded rounded-xl"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-white bg-opacity-5 rounded rounded-xl"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
     :class="{ 'mt-10': isMobileDevice(), 'mb-2': isDesktopDevice() }"
@@ -31,32 +31,35 @@
             data-class-in="translate-y-0 opacity-100"
             data-class-out="translate-y-32 opacity-0"
           >
-            <div
-              class="rounded w-full"
-            >
-            <div class="duration-4 transform transition duration-500 hover:scale-125">
+            <div class="rounded w-full">
               <div
-                class="flex flex-row justify-center uppercase font-bold text-white pt-6"
+                class="duration-4 transform transition duration-500 hover:scale-125"
               >
-                <p>{{ skill.name }}</p>
+                <div
+                  class="flex flex-row justify-center uppercase font-bold text-white pt-6"
+                >
+                  <p>{{ skill.name }}</p>
+                </div>
+                <div class="w-full flex justify-center">
+                  <div class="p-2 pb-6 text-grey-darker flex flex-col">
+                    <icon-svg
+                      :class="{ 'ml-9': skill.icon == 'golangicon' }"
+                      class="flex self-center rounded-full shadow-sm"
+                      :name="skill.icon"
+                      width="100"
+                      height="100"
+                    />
+                    <div
+                      :class="{ 'ml-5': skill.icon == 'golangicon' }"
+                      class="mt-3 bg-white bg-opacity-10 rounded-full h-10 w-24 items-center flex justify-items-center..."
+                    >
+                      <p class="w-full text-center text-green-200">
+                        {{ skill.percentage }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="w-full flex justify-center">
-              <div class="p-2 pb-6 text-grey-darker flex flex-col">
-                <icon-svg
-                  :class="{ 'ml-9': skill.icon == 'golangicon' }"
-                  class="flex self-center rounded-full shadow-sm"
-                  :name="skill.icon"
-                  width="100"
-                  height="100"
-                />
-                 <div
-                  :class="{ 'ml-5': skill.icon == 'golangicon' }"
-                  class="mt-3 bg-white bg-opacity-10 rounded-full h-10 w-24  items-center flex justify-items-center...">
-                <p class="w-full text-center text-green-200">{{skill.percentage}}</p>
-              </div>
-              </div>
-              </div>
-            </div>
             </div>
           </div>
         </draggable>
@@ -106,8 +109,6 @@ export default {
 
   mounted() {
     this.loadAnimation();
-    this.isMobileDevice();
-    this.mySkill = this.SKILL;
   },
 
   methods: {
@@ -120,12 +121,6 @@ export default {
     },
     isDesktopDevice() {
       return isDesktop();
-    },
-    showMoreData() {
-      this.skillOne.push({
-        name: "Golang",
-        icon: "golangicon",
-      });
     },
     onChangeFullSkill() {
       this.showFullSkill();
@@ -142,12 +137,12 @@ export default {
 };
 </script>
 <style scoped>
-.card-blur-custome{
-    filter: blur(2px);
+.card-blur-custome {
+  filter: blur(2px);
   -webkit-filter: blur(2px);
 }
-.card-list-blur-custome{
-    filter: blur(0px);
+.card-list-blur-custome {
+  filter: blur(0px);
   -webkit-filter: blur(0px);
 }
 </style>
