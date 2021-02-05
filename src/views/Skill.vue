@@ -52,7 +52,7 @@
                  <div
                   :class="{ 'ml-5': skill.icon == 'golangicon' }"
                   class="mt-3 bg-white bg-opacity-10 rounded-full h-10 w-24  items-center flex justify-items-center...">
-                <p class="w-full text-center text-green-200">25%</p>
+                <p class="w-full text-center text-green-200">{{skill.percentage}}</p>
               </div>
               </div>
               </div>
