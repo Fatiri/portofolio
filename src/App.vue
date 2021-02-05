@@ -1,11 +1,12 @@
 <template>
-  <div id="app" class="font-poppins">
+  <div id="app" class="font-poppins pb-64">
     <div id="nav">
       <nav-bar />
       <hero />
     </div>
     <skill />
     <service-client />
+    <contact/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import NavBar from "./components/NavBar.vue";
 import Hero from "./views/Hero.vue";
 import Skill from "./views/Skill.vue";
 import ServiceClient from "./views/ServiceClient.vue";
+import Contact from "./views/Contact.vue";
 export default {
   name: "App",
   components: {
@@ -21,6 +23,7 @@ export default {
     Hero,
     Skill,
     ServiceClient,
+    Contact
   },
 };
 </script>

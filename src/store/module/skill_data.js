@@ -1,9 +1,5 @@
 export const SkillData = [
     {
-        name: "node.js",
-        icon: "javascripticon",
-    },
-    {
         name: "Golang",
         icon: "golangicon",
     },
@@ -24,13 +20,13 @@ export const SkillData = [
         name: "React.js",
         icon: "reacticon",
     },
-]
-
-export const SkillDataFull = [
     {
         name: "node.js",
         icon: "javascripticon",
     },
+]
+
+export const SkillDataFull = [
     {
         name: "Golang",
         icon: "golangicon",
@@ -51,5 +47,9 @@ export const SkillDataFull = [
     {
         name: "React.js",
         icon: "reacticon",
+    },
+    {
+        name: "node.js",
+        icon: "javascripticon",
     },
 ]

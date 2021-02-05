@@ -1,13 +1,13 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 shadow-md bg-white bg-opacity-5 rounded rounded-xl"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
     :class="{ 'mt-10': isMobileDevice(), 'mb-2': isDesktopDevice() }"
   >
     <div
-      class="transition"
-      :class="{ 'mt-0': isMobileDevice(), 'mt-16': isDesktopDevice() }"
+      class="transition card-list-blur-custome pt-8"
+      :class="{ 'mt-0': isMobileDevice(), 'mt-1': isDesktopDevice() }"
     >
       <p class="font-semibold text-center mb-2 text-gray-500">skills</p>
       <p class="font-semibold text-center text-2xl text-white">My Skills</p>
@@ -20,8 +20,8 @@
           filter=".action-button"
           tag="ul"
           :class="{
-            'grid grid-cols-2': isMobileDevice(),
-            'grid grid-cols-3': isDesktopDevice(),
+            'grid grid-cols-3': isMobileDevice(),
+            'grid grid-cols-6': isDesktopDevice(),
           }"
         >
           <div
@@ -32,22 +32,31 @@
             data-class-out="translate-y-32 opacity-0"
           >
             <div
-              class="rounded w-full hover:shadow-2xl duration-4 transform transition duration-500 hover:scale-125"
+              class="rounded w-full"
             >
+            <div class="duration-4 transform transition duration-500 hover:scale-125">
               <div
                 class="flex flex-row justify-center uppercase font-bold text-white pt-6"
               >
                 <p>{{ skill.name }}</p>
               </div>
-              <div class="p-2 pb-6 text-grey-darker text-justify flex flex-col">
+              <div class="w-full flex justify-center">
+              <div class="p-2 pb-6 text-grey-darker flex flex-col">
                 <icon-svg
                   :class="{ 'ml-9': skill.icon == 'golangicon' }"
                   class="flex self-center rounded-full shadow-sm"
                   :name="skill.icon"
-                  width="120"
-                  height="120"
+                  width="100"
+                  height="100"
                 />
+                 <div
+                  :class="{ 'ml-5': skill.icon == 'golangicon' }"
+                  class="mt-3 bg-white bg-opacity-10 rounded-full h-10 w-24  items-center flex justify-items-center...">
+                <p class="w-full text-center text-green-200">25%</p>
               </div>
+              </div>
+              </div>
+            </div>
             </div>
           </div>
         </draggable>
@@ -132,3 +141,13 @@ export default {
   },
 };
 </script>
+<style scoped>
+.card-blur-custome{
+    filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+.card-list-blur-custome{
+    filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+</style>

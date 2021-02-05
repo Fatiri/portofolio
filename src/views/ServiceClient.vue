@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 shadow-lg transform duration-300 opacity-0 translate-y-10 mt-10 pb-10"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-10 mt-10 pb-10"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-10 opacity-0"
   >
@@ -12,7 +12,7 @@
 
       <div
         :class="{
-          'grid grid-cols-4 gap-4 mt-10': isDesktopDevice(),
+          'grid lg:grid-cols-4 md:grid-cols-3 gap-4 mt-10': isDesktopDevice(),
           'grid grid-cols-1 gap-1  mt-10': isMobileDevice(),
         }"
       >
