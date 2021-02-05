@@ -1,15 +1,13 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex"
+import skill from "./module/skill";
+import serviceClient from "./module/service_client";
 
-Vue.use(Vuex)
 
+Vue.use(Vuex);
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    skill,
+    serviceClient
   }
 })
