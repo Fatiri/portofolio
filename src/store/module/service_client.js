@@ -1,7 +1,7 @@
-import {serviceClientData} from '../module/service_client_data'
+import { serviceClientData } from '../module/service_client_data'
 
 const state = {
-   serviceClient : serviceClientData,
+    serviceClient: serviceClientData,
 }
 
 
