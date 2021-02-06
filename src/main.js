@@ -5,7 +5,9 @@ import router from './router'
 import store from './store'
 import './assets/css/style.css'
 import VueCarousel from 'vue-carousel';
+import VueImg from 'v-img';
 
+Vue.use(VueImg);
 Vue.use(VueCarousel);
 Vue.config.productionTip = false
 
