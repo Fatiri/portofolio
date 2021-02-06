@@ -9,6 +9,9 @@ module.exports = {
       poppins:["Poppins"],
       kanit:["Kanit"]
     },
+    scale:{
+      '1000':'2'
+    },
     extend: {},
   },
   variants: {},

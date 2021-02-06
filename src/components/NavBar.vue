@@ -1,5 +1,5 @@
 <template>
-  <nav class="lg:py-3">
+  <nav class="lg:py-3" id="navbar">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-1">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -69,18 +69,28 @@
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-semibold"
-                >Home</a
+                href="#about"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                >About Me</a
               >
               <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-semibold"
+                href="#skill"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                >Skills</a
+              >
+              <a
+                href="#service"
+                class="text-gray-300  hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                >Service</a
+              >
+               <a
+                href="#project"
+                class="text-gray-300  hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
                 >Projects</a
               >
               <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-semibold"
+                href="#contact"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
                 >Contact</a
               >
             </div>
@@ -122,6 +132,14 @@ import IconSvg from "../assets/svg/index.vue";
 export default {
   components: {
     IconSvg,
+  },
+  methods: {
+    isMobileDevice() {
+      return isMobilePhone();
+    },
+    isDesktopDevice() {
+      return isDesktop();
+    },
   },
 };
 </script>

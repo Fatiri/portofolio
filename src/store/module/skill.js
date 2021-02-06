@@ -8,11 +8,9 @@ const state = {
 
 const actions = {
     showFullSkill({ commit }) {
-        console.log("masuk");
         commit('SHOW_FULL_SKILL', SkillDataFull);
     },
     showLessSkill({ commit }) {
-        console.log("masuk");
         commit('SHOW_LESS_SKILL', SkillData);
     }
 }

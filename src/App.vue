@@ -7,6 +7,7 @@
     <skill />
     <service-client />
     <contact />
+    <testimony />
     <contact-us />
     <footer-bar />
   </div>
@@ -18,6 +19,7 @@ import Hero from "./views/Hero.vue";
 import Skill from "./views/Skill.vue";
 import ServiceClient from "./views/ServiceClient.vue";
 import Contact from "./views/Contact.vue";
+import Testimony from "./views/Testimony.vue";
 import ContactUs from "./views/ContactUs.vue";
 import FooterBar from "./components/FooterBar.vue";
 export default {
@@ -28,6 +30,7 @@ export default {
     Skill,
     ServiceClient,
     Contact,
+    Testimony,
     ContactUs,
     FooterBar,
   },

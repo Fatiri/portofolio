@@ -6,7 +6,7 @@ class Animasection {
         this.options = Object.assign(this, {
             root: null, // relative to document viewport 
             rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
-            threshold: 0.04 // visible amount of item shown in relation to root (higher values can cause problems)
+            threshold: 0.01 // visible amount of item shown in relation to root (higher values can cause problems)
         }, options);
 
         // This is the guy who will tell us when an element intersects with the viewport

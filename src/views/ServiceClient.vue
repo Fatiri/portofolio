@@ -1,8 +1,9 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-10 mt-10 pb-10"
+    id="service"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-1000 opacity-0 translate-y-10 mt-10 mb-28"
     data-class-in="translate-y-0 opacity-100"
-    data-class-out="translate-y-10 opacity-0"
+    data-class-out="translate-y-5 opacity-0"
   >
     <div class="lg:mt-16 md:mt-16 transition">
       <p class="font-semibold text-center mb-2 text-gray-500">I AM GRAT AT</p>

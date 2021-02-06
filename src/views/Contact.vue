@@ -14,18 +14,24 @@
         data-class-in="translate-y-0 opacity-100"
         data-class-out="translate-y-32 opacity-0"
       >
-        <p class="font-semibold text-left text-3xl mb-2 text-green-600">
+        <p class="font-semibold text-left text-3xl mb-2 text-green-600"
+         :class="{ 'pr-3 pl-3': isMobileDevice()}"
+        >
           Have a project on your mind.
         </p>
-        <p class="font-semibold text-left text-md text-gray-500">
+        <p class="font-semibold text-left text-md text-gray-500"
+        :class="{ 'pr-3 pl-3': isMobileDevice()}"
+        >
           A small river named Duden flows by their place and supplies it with
           the necessary regelialia. It is a paradisematic country, in which
           roasted parts of sentences fly.
         </p>
       </div>
-      <div class="grid lg:justify-items-end md:justify-items-start pt-8">
+      <div class="grid  pt-8"
+      :class="{ 'justify-items-center': isMobileDevice(), 'lg:justify-items-end md:justify-items-start': isDesktopDevice() }"
+      >
         <div
-          class="bg-green-600 rounded w-40 text-center text-sm h-12 pt-3 hover:shadow-lg flex cursor-pointer duration-4 transform transition duration-1000 hover:scale-110"
+          class="bg-green-600 rounded w-40 text-center text-sm h-12 pt-2 hover:shadow-lg flex cursor-pointer duration-4 transform transition duration-1000 hover:scale-110"
         >
           <div
             class="ransform duration-100 opacity-0 translate-y-32"
@@ -39,7 +45,7 @@
               height="40"
             />
           </div>
-          <p class="pt-1 text-bold text-white">Contact Me</p>
+          <p class="mt-1 text-bold text-white">Contact Me</p>
         </div>
       </div>
     </div>

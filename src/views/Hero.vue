@@ -153,7 +153,7 @@ export default {
     height: 4px;
     width: 320px;
     margin-left: 15px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.418);
     margin-top: -8px;
   }
 
@@ -214,7 +214,7 @@ export default {
 .line-profile {
   height: 4px;
   width: 315px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.308);
   margin-top: -7.8px;
 }
 .text-content {

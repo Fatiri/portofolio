@@ -1,5 +1,6 @@
 <template>
   <div
+    id="skill"
     class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-white bg-opacity-5 rounded rounded-xl"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
