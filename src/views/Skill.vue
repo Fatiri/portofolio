@@ -51,8 +51,7 @@
                       height="100"
                     />
                     <div
-                      :class="{ 'ml-5': skill.icon == 'golangicon' }"
-                      class="mt-3 bg-white bg-opacity-10 rounded-full h-10 w-24 items-center flex justify-items-center..."
+                      class="mt-3 bg-white bg-opacity-10 rounded-xl h-10 w-40 items-center flex justify-items-center..."
                     >
                       <p class="w-full text-center text-green-200">
                         {{ skill.percentage }}

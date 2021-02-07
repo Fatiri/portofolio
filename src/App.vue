@@ -10,10 +10,12 @@
     <testimony />
     <contact-us />
     <footer-bar />
+    <arrow-scroll v-if="isDesktopDevice()"/>
   </div>
 </template>
 
 <script>
+import { isDesktop, isMobilePhone } from "./service/device";
 import NavBar from "./components/NavBar.vue";
 import Hero from "./views/Hero.vue";
 import Skill from "./views/Skill.vue";
@@ -22,6 +24,7 @@ import Contact from "./views/Contact.vue";
 import Testimony from "./views/Testimony.vue";
 import ContactUs from "./views/ContactUs.vue";
 import FooterBar from "./components/FooterBar.vue";
+import ArrowScroll from "./components/ArrowScroll.vue";
 export default {
   name: "App",
   components: {
@@ -33,6 +36,15 @@ export default {
     Testimony,
     ContactUs,
     FooterBar,
+    ArrowScroll,
+  },
+   methods: {
+    isMobileDevice() {
+      return isMobilePhone();
+    },
+    isDesktopDevice() {
+      return isDesktop();
+    },
   },
 };
 </script>

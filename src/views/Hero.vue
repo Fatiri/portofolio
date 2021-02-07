@@ -92,7 +92,7 @@
           </p>
 
           <div
-            class="-mx-3 flex"
+            class="-mx-3 flex cursor-pointer"
             :class="{ 'mb-0': isMobileDevice(), 'mb-6': isDesktopDevice() }"
           >
             <div

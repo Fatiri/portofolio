@@ -21,7 +21,6 @@
         :autoplay="true"
         :loop="true"
         :autoplayTimeout="5000"
-        :paginationEnabled="false"
       >
         <slide>
           <div

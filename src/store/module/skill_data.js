@@ -2,33 +2,33 @@ export const SkillData = [
     {
         name: "Golang",
         icon: "golangicon",
-        percentage:"86%",
+        percentage:"Advanced",
     },
 
     {
         name: "Vue.js",
         icon: "vueicon",
-        percentage:"92%",
+        percentage:"Advanced",
     },
     {
         name: "Angular.js",
         icon: "angularicon",
-        percentage:"64%",
+        percentage:"Intermediate",
     },
     {
         name: "Spring Boot",
         icon: "springbooticon",
-        percentage:"90%",
+        percentage:"Advanced",
     },
     {
         name: "React.js",
         icon: "reacticon",
-        percentage:"89%",
+        percentage:"Advanced",
     },
     {
         name: "node.js",
         icon: "javascripticon",
-        percentage:"95%",
+        percentage:"Intermediate",
     },
 ]
 
@@ -36,32 +36,32 @@ export const SkillDataFull = [
     {
         name: "Golang",
         icon: "golangicon",
-        percentage:"86%",
+        percentage:"Advanced",
     },
 
     {
         name: "Vue.js",
         icon: "vueicon",
-        percentage:"92%",
+        percentage:"Advanced",
     },
     {
         name: "Angular.js",
         icon: "angularicon",
-        percentage:"64%",
+        percentage:"Intermediate",
     },
     {
         name: "Spring Boot",
         icon: "springbooticon",
-        percentage:"90%",
+        percentage:"Advanced",
     },
     {
         name: "React.js",
         icon: "reacticon",
-        percentage:"89%",
+        percentage:"Advanced",
     },
     {
         name: "node.js",
         icon: "javascripticon",
-        percentage:"95%",
+        percentage:"Intermediate",
     },
 ]

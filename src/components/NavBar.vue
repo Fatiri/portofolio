@@ -68,30 +68,28 @@
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a
-                href="#about"
-                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
-                >About Me</a
+              <div
+                class="text-gray-300 cursor-pointer hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                >About Me</div
               >
-              <a
-                href="#skill"
-                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
-                >Skills</a
+              <div
+                class="text-gray-300 cursor-pointer hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                @click="scrollTo('skill')"
+                >Skills</div
               >
-              <a
-                href="#service"
-                class="text-gray-300  hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
-                >Service</a
+              <div
+                class="text-gray-300 cursor-pointer  hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                @click="scrollTo('service')"
+                >Service</div
               >
-               <a
-                href="#project"
-                class="text-gray-300  hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
-                >Projects</a
+               <div
+                class="text-gray-300 cursor-pointer  hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                >Projects</div
               >
-              <a
-                href="#contact"
-                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
-                >Contact</a
+              <div
+                class="text-gray-300 cursor-pointer hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                 @click="scrollTo('contact')"
+                >Contact</div
               >
             </div>
           </div>
@@ -140,6 +138,15 @@ export default {
     isDesktopDevice() {
       return isDesktop();
     },
+    scrollTo(nameComponent){
+      if (nameComponent === "skill"){
+        window.scroll(0,400)
+      } else if (nameComponent === "service"){
+        window.scroll(0,1000)
+      }else if (nameComponent === "contact"){
+        window.scroll(0,2200)
+      }
+    }
   },
 };
 </script>

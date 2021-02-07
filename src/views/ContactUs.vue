@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 mt-10 rounded rounded-xl pb-10 mb-40"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 mt-10 rounded rounded-xl pb-10 mb-28"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
     :class="{ 'mt-10': isMobileDevice(), 'mb-2': isDesktopDevice() }"
@@ -123,7 +123,7 @@
           width="35"
           height="35"
         />
-        <div class="ml-1 mt-3 text-sm text-white">Send Message</div>
+        <div class="ml-1 mt-3 text-md text-white">Send Message</div>
       </button>
     </div>
   </div>

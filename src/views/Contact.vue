@@ -39,13 +39,13 @@
             data-class-out="translate-y-32 opacity-0"
           >
             <icon-svg
-              class="ml-4 animate-pulse"
+              class="ml-5 animate-pulse"
               name="mailicon"
-              width="40"
-              height="40"
+              width="35"
+              height="35"
             />
           </div>
-          <p class="mt-1 text-bold text-white">Contact Me</p>
+          <p class="mt-1 text-md text-white">Contact Me</p>
         </div>
       </div>
     </div>
