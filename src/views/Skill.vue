@@ -1,7 +1,6 @@
 <template>
-  <div
-    id="skill"
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-white bg-opacity-5 rounded rounded-xl"
+  <div  
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-white bg-opacity-5 rounded rounded-xl pb-10"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
     :class="{ 'mt-10': isMobileDevice(), 'mb-2': isDesktopDevice() }"
@@ -10,8 +9,8 @@
       class="transition card-list-blur-custome pt-8"
       :class="{ 'mt-0': isMobileDevice(), 'mt-1': isDesktopDevice() }"
     >
-      <p class="font-semibold text-center mb-2 text-gray-500">skills</p>
-      <p class="font-semibold text-center text-2xl text-white">My Skills</p>
+      <p class="font-semibold text-center mb-2 text-gray-500">skills & Tools</p>
+      <p class="font-semibold text-center text-2xl text-white">Skills & Tools</p>
       <div :class="{ 'mt-1': isMobileDevice(), 'mt-5': isDesktopDevice() }">
         <draggable
           :list="SKILL"
@@ -36,25 +35,20 @@
               <div
                 class="duration-4 transform transition duration-500 hover:scale-125"
               >
-                <div
-                  class="flex flex-row justify-center uppercase font-bold text-white pt-6"
-                >
-                  <p>{{ skill.name }}</p>
-                </div>
                 <div class="w-full flex justify-center">
-                  <div class="p-2 pb-6 text-grey-darker flex flex-col">
+                  <div class="p-2 text-grey-darker flex flex-col">
                     <icon-svg
-                      :class="{ 'ml-9': skill.icon == 'golangicon' }"
+                      :class="{ 'w-16 h-24 pt-3': skill.icon == 'golangicon' }"
                       class="flex self-center rounded-full shadow-sm"
                       :name="skill.icon"
-                      width="100"
-                      height="100"
+                      width="90"
+                      height="90"
                     />
                     <div
-                      class="mt-3 bg-white bg-opacity-10 rounded-xl h-10 w-40 items-center flex justify-items-center..."
+                      class="mt-3 rounded-50 h-10 w-40 items-center flex justify-items-center..."
                     >
                       <p class="w-full text-center text-green-200">
-                        {{ skill.percentage }}
+                        {{ skill.name }}
                       </p>
                     </div>
                   </div>
@@ -64,7 +58,7 @@
           </div>
         </draggable>
       </div>
-      <div
+      <!-- <div
         v-if="!BUTTON_SHOW"
         class="flex pt-10 justify-center shadow-sm py-10 transform transition duration-500 hover:scale-125"
       >
@@ -89,7 +83,7 @@
             height="28"
           />
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

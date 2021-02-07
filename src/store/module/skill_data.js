@@ -1,6 +1,6 @@
 export const SkillData = [
     {
-        name: "Golang",
+        name: "Go",
         icon: "golangicon",
         percentage:"Advanced",
     },
@@ -34,7 +34,7 @@ export const SkillData = [
 
 export const SkillDataFull = [
     {
-        name: "Golang",
+        name: "Go",
         icon: "golangicon",
         percentage:"Advanced",
     },

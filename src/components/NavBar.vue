@@ -144,7 +144,7 @@ export default {
       } else if (nameComponent === "service"){
         window.scroll(0,1000)
       }else if (nameComponent === "contact"){
-        window.scroll(0,2200)
+        window.scroll(0,2400)
       }
     }
   },
