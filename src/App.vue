@@ -6,6 +6,7 @@
     </div>
     <skill />
     <service-client />
+    <project/>
     <contact />
     <testimony />
     <contact-us />
@@ -25,6 +26,7 @@ import Testimony from "./views/Testimony.vue";
 import ContactUs from "./views/ContactUs.vue";
 import FooterBar from "./components/FooterBar.vue";
 import ArrowScroll from "./components/ArrowScroll.vue";
+import Project from "./views/Project.vue"
 export default {
   name: "App",
   components: {
@@ -37,6 +39,7 @@ export default {
     ContactUs,
     FooterBar,
     ArrowScroll,
+    Project
   },
    methods: {
     isMobileDevice() {
