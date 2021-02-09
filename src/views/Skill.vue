@@ -1,4 +1,5 @@
 <template>
+<div>
   <div  
     class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-white bg-opacity-5 rounded rounded-xl pb-10"
     data-class-in="translate-y-0 opacity-100"
@@ -58,9 +59,11 @@
           </div>
         </draggable>
       </div>
-      <!-- <div
+    </div>
+    </div>
+     <div
         v-if="!BUTTON_SHOW"
-        class="flex pt-10 justify-center shadow-sm py-10 transform transition duration-500 hover:scale-125"
+        class="flex pt-2 justify-center shadow-sm transform transition duration-500 hover:scale-125"
       >
         <div @click="onChangeFullSkill()">
           <icon-svg
@@ -73,7 +76,7 @@
       </div>
       <div
         v-if="BUTTON_SHOW"
-        class="flex pt-10 justify-center shadow-sm py-10 ransform transition duration-500 hover:scale-125"
+        class="flex pt-2 justify-center shadow-sm ransform transition duration-500 hover:scale-125"
       >
         <div @click="onChangeLessSkill()">
           <icon-svg
@@ -83,8 +86,7 @@
             height="28"
           />
         </div>
-      </div> -->
-    </div>
+      </div>
   </div>
 </template>
 

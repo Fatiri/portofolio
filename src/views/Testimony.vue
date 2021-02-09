@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 mt-10 rounded rounded-xl pb-10"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 mt-10 rounded rounded-xl pb-5"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
     :class="{ 'mt-10': isMobileDevice(), 'mb-2': isDesktopDevice() }"
@@ -35,7 +35,7 @@
               data-class-out="translate-y-32 opacity-0"
             >
               <div
-                class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+                class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
               >
                 <div class="mb-8">
                   <p class="text-sm text-grey-dark flex items-center">
@@ -79,7 +79,7 @@
               data-class-out="translate-y-32 opacity-0"
             >
               <div
-                class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+                class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
               >
                 <div class="mb-8">
                   <p class="text-sm text-grey-dark flex items-center">
@@ -123,7 +123,7 @@
               data-class-out="translate-y-32 opacity-0"
             >
               <div
-                class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+                class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
               >
                 <div class="mb-8">
                   <p class="text-sm text-grey-dark flex items-center">
@@ -176,7 +176,7 @@
               data-class-out="translate-y-32 opacity-0"
             >
               <div
-                class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+                class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
               >
                 <div class="mb-8">
                   <p class="text-sm text-grey-dark flex items-center">
@@ -220,7 +220,7 @@
               data-class-out="translate-y-32 opacity-0"
             >
               <div
-                class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+                class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
               >
                 <div class="mb-8">
                   <p class="text-sm text-grey-dark flex items-center">
@@ -264,7 +264,7 @@
               data-class-out="translate-y-32 opacity-0"
             >
               <div
-                class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+                class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
               >
                 <div class="mb-8">
                   <p class="text-sm text-grey-dark flex items-center">

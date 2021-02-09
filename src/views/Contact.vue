@@ -23,11 +23,10 @@
         :class="{ 'pr-3 pl-3': isMobileDevice()}"
         >
           A small river named Duden flows by their place and supplies it with
-          the necessary regelialia. It is a paradisematic country, in which
-          roasted parts of sentences fly.
+         
         </p>
       </div>
-      <div class="grid  pt-8"
+      <div class="grid pt-2"
       :class="{ 'justify-items-center': isMobileDevice(), 'lg:justify-items-end md:justify-items-start': isDesktopDevice() }"
       >
         <div

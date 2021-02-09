@@ -142,7 +142,7 @@ export default {
       if (nameComponent === "skill"){
         window.scroll(0,400)
       } else if (nameComponent === "service"){
-        window.scroll(0,1000)
+        window.scroll(0,900)
       }else if (nameComponent === "contact"){
         window.scroll(0,2400)
       }

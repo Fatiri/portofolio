@@ -5,7 +5,7 @@
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-5 opacity-0"
   >
-    <div class="lg:mt-16 md:mt-16 transition">
+    <div class="lg:mt-8 md:mt-8 transition">
       <p class="font-semibold text-center mb-2 text-gray-500">I AM GRAT AT</p>
       <p class="font-semibold text-center text-2xl text-white">
         I do awesome services for our clients
