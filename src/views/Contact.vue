@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-gray-100 rounded bg-opacity-5 rounded rounded-xl"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-gray-100 rounded bg-opacity-5 rounded rounded-md"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
     :class="{ 'mt-10': isMobileDevice(), 'mb-2': isDesktopDevice() }"

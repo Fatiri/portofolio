@@ -1,7 +1,7 @@
 <template>
 <div>
   <div  
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-white bg-opacity-5 rounded rounded-xl pb-10"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 bg-white bg-opacity-5 rounded rounded-md pb-10"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
     :class="{ 'mt-10': isMobileDevice(), 'mb-2': isDesktopDevice() }"
