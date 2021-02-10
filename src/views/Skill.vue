@@ -91,8 +91,8 @@
 </template>
 
 <script>
-import Animasection from "../service/animation";
-import { isDesktop, isMobilePhone } from "../service/device";
+import Animasection from "../utils/animation";
+import { isDesktop, isMobilePhone } from "../utils/device";
 import draggable from "vuedraggable";
 import IconSvg from "../assets/svg/index.vue";
 import { mapGetters, mapActions } from "vuex";

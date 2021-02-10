@@ -72,7 +72,7 @@
         </div>
         <div
           class="md:w-1/1 px-3 lg:ml-28 md:ml-10 content-top"
-          :class="{ 'mt-1': isMobileDevice(), 'mt-28': isDesktopDevice() }"
+          :class="{ 'mt-1': isMobileDevice(), 'lg:mt-10 md:mt-10': isDesktopDevice() }"
         >
           <div class="text-green-400 text-3xl mb-3">Hi, I'm Ilham Fatiri</div>
           <div class="text-white lg:text-4xl md:text-3xl">
@@ -84,11 +84,12 @@
           <p
             class="mt-2 text-gray-500 lg:text-1xl md:text-sm mt-4 lg:w-10/12 md:w-10/12"
           >
-            &nbsp;&nbsp;&nbsp;I am a graduate of the Bootcamp Enigma Academy, I
-            am educated not only to be someone who has knowledge in the field of
-            software engineer, but also to become someone who has character,and
-            can be useful to many people. One of my current dreams,wants to
-            surpass one of my teachers.
+            &nbsp;&nbsp;&nbsp;is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <div
@@ -113,7 +114,7 @@
 <script>
 import IconSvg from "../assets/svg/index.vue";
 
-import { isDesktop, isMobilePhone } from "../service/device";
+import { isDesktop, isMobilePhone } from "../utils/device";
 export default {
   components: {
     IconSvg,

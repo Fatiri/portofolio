@@ -84,6 +84,7 @@
               >
                <div
                 class="text-gray-300 cursor-pointer  hover:text-white px-3 py-2 rounded-md text-lg font-semibold transform transition duration-500 hover:scale-125"
+                @click="scrollTo('project')"
                 >Projects</div
               >
               <div
@@ -143,8 +144,10 @@ export default {
         window.scroll(0,400)
       } else if (nameComponent === "service"){
         window.scroll(0,900)
+      } else if (nameComponent === "project"){
+        window.scroll(0,1350)
       }else if (nameComponent === "contact"){
-        window.scroll(0,2400)
+        window.scroll(0,2500)
       }
     }
   },

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { isDesktop, isMobilePhone } from "./service/device";
+import { isDesktop, isMobilePhone } from "./utils/device";
 import NavBar from "./components/NavBar.vue";
 import Hero from "./views/Hero.vue";
 import Skill from "./views/Skill.vue";

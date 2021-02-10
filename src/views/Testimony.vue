@@ -310,8 +310,8 @@
 </template>
 
 <script>
-import Animasection from "../service/animation";
-import { isDesktop, isMobilePhone } from "../service/device";
+import Animasection from "../utils/animation";
+import { isDesktop, isMobilePhone } from "../utils/device";
 import IconSvg from "../assets/svg/index.vue";
 import { Carousel, Slide } from "vue-carousel";
 

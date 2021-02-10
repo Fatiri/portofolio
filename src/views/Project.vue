@@ -1,7 +1,7 @@
 <template>
   <div
     id="service"
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-1000 opacity-0 translate-y-10 mt-10 mb-10 pt-2 pb-10 bg-white bg-opacity-5 rounded rounded-md"
+    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-1000 opacity-0 translate-y-10 mt-10 pt-2 pb-10 bg-white bg-opacity-5 rounded rounded-tl-md rounded-tr-md"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-5 opacity-0"
   >
@@ -48,7 +48,7 @@
                   "
                 >
                   <div class="py-20 bg-black bg-opacity-0 hover:bg-opacity-50">
-                    <p class="text-green-500 font-bold text-2xl text-center">Lion Parcel</p>
+                    <p class="text-green-500 font-bold text-2xl text-center">Example</p>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@
                   "
                 >
                   <div class="py-20 bg-black bg-opacity-0 hover:bg-opacity-50">
-                    <p class="text-green-500 font-bold text-2xl text-center">Lion Parcel</p>
+                    <p class="text-green-500 font-bold text-2xl text-center">Example</p>
                   </div>
                 </div>
               </div>
@@ -86,7 +86,7 @@
                   "
                 >
                   <div class="py-20 bg-black bg-opacity-0 hover:bg-opacity-50">
-                    <p class="text-green-500 font-bold text-2xl text-center">Lion Parcel</p>
+                    <p class="text-green-500 font-bold text-2xl text-center">Example</p>
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@
                   "
                 >
                   <div class="py-20 bg-black bg-opacity-0 hover:bg-opacity-50">
-                    <p class="text-green-500 font-bold text-2xl text-center">Lion Parcel</p>
+                    <p class="text-green-500 font-bold text-2xl text-center">Example</p>
                   </div>
                 </div>
               </div>
@@ -118,10 +118,10 @@
 </template>
 
 <script>
-import Animasection from "../service/animation";
+import Animasection from "../utils/animation";
 import IconSvg from "../assets/svg/index.vue";
 import { mapGetters } from "vuex";
-import { isDesktop, isMobilePhone } from "../service/device";
+import { isDesktop, isMobilePhone } from "../utils/device";
 import { Carousel, Slide } from "vue-carousel";
 
 export default {

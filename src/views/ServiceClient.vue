@@ -51,10 +51,10 @@
 </template>
 
 <script>
-import Animasection from "../service/animation";
+import Animasection from "../utils/animation";
 import IconSvg from "../assets/svg/index.vue";
 import { mapGetters } from "vuex";
-import { isDesktop, isMobilePhone } from "../service/device";
+import { isDesktop, isMobilePhone } from "../utils/device";
 
 export default {
   components: {

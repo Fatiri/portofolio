@@ -1,9 +1,9 @@
 <template>
   <div
-    class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 mt-10 rounded rounded-xl pb-10 mb-28"
+    class="mx-auto px-2 sm:px-6 lg:px-8 transform duration-300 opacity-0 translate-y-32 mt-10 rounded rounded-xl pb-10 mb-28"
     data-class-in="translate-y-0 opacity-100"
     data-class-out="translate-y-32 opacity-0"
-    :class="{ 'mt-10': isMobileDevice(), 'mb-2': isDesktopDevice() }"
+    :class="{ 'mt-10 max-w-full': isMobileDevice(), 'mb-2 max-w-7xl': isDesktopDevice() }"
   >
     <div
       class="transition card-list-blur-custome pt-8 grid justify-items-center"
@@ -24,9 +24,9 @@
         Have a Project?
       </p>
       <div
-      id="contact"
+        id="contact"
         class="shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 bg-white bg-opacity-10 transform duration-1000 opacity-0 translate-y-32"
-        :class="{ 'w-1/1': isMobileDevice(), 'w-1/2': isDesktopDevice() }"
+        :class="{ 'w-full': isMobileDevice(), 'w-1/2': isDesktopDevice() }"
         data-class-in="translate-y-0 opacity-100"
         data-class-out="translate-y-32 opacity-0"
       >
@@ -43,11 +43,18 @@
               Your Name
             </label>
             <input
-              class="appearance-none block text-black w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3 outline-none"
+              v-model="MESSAGE.name"
+              class="appearance-none block text-black w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 outline-none"
               id="grid-first-name"
               type="text"
               placeholder="Your Name"
+              :class="{
+                'border border-red-600': MESSAGE_INVALID_OBJECT.name !== '',
+              }"
             />
+            <p v-if="MESSAGE_INVALID_OBJECT.name !== ''" class="text-red-600">
+              {{ MESSAGE_INVALID_OBJECT.name }}
+            </p>
           </div>
           <div
             class="md:w-1/2 px-3 transform duration-1000 opacity-0 translate-y-32"
@@ -61,11 +68,18 @@
               Your Email
             </label>
             <input
+              v-model="MESSAGE.email"
               class="appearance-none block w-full text-black outline-none bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
               id="grid-last-name"
-              type="text"
+              type="email"
               placeholder="Your Email"
+              :class="{
+                'border border-red-600': MESSAGE_INVALID_OBJECT.email !== '',
+              }"
             />
+            <p v-if="MESSAGE_INVALID_OBJECT.email !== ''" class="text-red-600">
+              {{ MESSAGE_INVALID_OBJECT.email }}
+            </p>
           </div>
         </div>
         <div class="-mx-3 md:flex mb-6">
@@ -81,11 +95,21 @@
               Subject
             </label>
             <input
-              class="appearance-none block text-black w-full outline-none bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+              v-model="MESSAGE.subject"
+              class="appearance-none block text-black w-full outline-none bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
               id="grid-password"
               type="text"
               placeholder="Subject"
+              :class="{
+                'border border-red-600': MESSAGE_INVALID_OBJECT.subject !== '',
+              }"
             />
+            <p
+              v-if="MESSAGE_INVALID_OBJECT.subject !== ''"
+              class="text-red-600"
+            >
+              {{ MESSAGE_INVALID_OBJECT.subject }}
+            </p>
           </div>
         </div>
         <div class="-mx-3 md:flex mb-6">
@@ -101,38 +125,60 @@
               Message
             </label>
             <textarea
-              class="appearance-none block text-black outline-none w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+              v-model="MESSAGE.text"
+              class="appearance-none block text-black outline-none w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
               id="grid-password"
               type="text"
               placeholder="Message"
+              :class="{
+                'border border-red-600': MESSAGE_INVALID_OBJECT.text !== '',
+              }"
             />
-            <p class="text-white text-xs italic">
-              Make it as long and as crazy as you'd like
+            <p v-if="MESSAGE_INVALID_OBJECT.text !== ''" class="text-red-600">
+              {{ MESSAGE_INVALID_OBJECT.text }}
             </p>
           </div>
         </div>
       </div>
-      <button
-        class="bg-green-600 text-black w-52 h-12 rounded-md flex focus:outline-none duration-4 transform transition duration-1000 hover:scale-110 transform duration-1000 opacity-0 translate-y-32"
+      <div
+        class="duration-4 transform transition duration-1000 hover:scale-110 transform duration-1000 opacity-0 translate-y-32"
         data-class-in="translate-y-0 opacity-100"
         data-class-out="translate-y-32 opacity-0"
       >
-        <icon-svg
-          class="flex mt-1 ml-7 self-center rounded-full shadow-sm animate-pulse"
-          name="sendmessageicon"
-          width="35"
-          height="35"
-        />
-        <div class="ml-1 mt-3 text-md text-white">Send Message</div>
-      </button>
+        <button
+          v-if="!BUTTON_SEND_STATUS"
+          @click="onSendMessage()"
+          class="bg-green-600 text-black w-52 h-12 rounded-md flex focus:outline-none"
+        >
+          <icon-svg
+            class="flex mt-1 ml-7 self-center rounded-full shadow-sm animate-pulse"
+            name="sendmessageicon"
+            width="35"
+            height="35"
+          />
+          <div class="ml-1 mt-3 text-md text-white">Send Message</div>
+        </button>
+        <button
+          v-if="BUTTON_SEND_STATUS"
+          class="bg-green-600 text-black disabled:opacity-50 cursor-default w-52 h-12 rounded-md flex focus:outline-none"
+        >
+          <icon-svg
+            class="flex mt-1 ml-24 self-center rounded-full shadow-sm animate-pulse"
+            name="loading"
+            width="25"
+            height="25"
+          />
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Animasection from "../service/animation";
-import { isDesktop, isMobilePhone } from "../service/device";
+import Animasection from "../utils/animation";
+import { isDesktop, isMobilePhone } from "../utils/device";
 import IconSvg from "../assets/svg/index.vue";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
@@ -144,6 +190,7 @@ export default {
   },
 
   methods: {
+    ...mapActions(["handleSendMessage"]),
     loadAnimation() {
       Animasection.observeAll();
     },
@@ -153,6 +200,14 @@ export default {
     isDesktopDevice() {
       return isDesktop();
     },
+    onSendMessage() {
+      this.handleSendMessage();
+    },
+  },
+  computed: {
+    ...mapGetters(["BUTTON_SEND_STATUS"]),
+    ...mapGetters(["MESSAGE"]),
+    ...mapGetters(["MESSAGE_INVALID_OBJECT"]),
   },
 };
 </script>
