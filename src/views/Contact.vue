@@ -14,10 +14,10 @@
         data-class-in="translate-y-0 opacity-100"
         data-class-out="translate-y-32 opacity-0"
       >
-        <p class="font-semibold text-left text-3xl mb-2 text-green-600"
+        <p class="font-semibold text-left text-3xl mb-2 text-green-600 "
          :class="{ 'pr-3 pl-3': isMobileDevice()}"
         >
-          Have a project on your mind.
+          Interested working with me?
         </p>
       </div>
       <div class="grid"

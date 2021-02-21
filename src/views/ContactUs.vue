@@ -10,7 +10,7 @@
       :class="{ 'mt-0': isMobileDevice(), 'mt-1': isDesktopDevice() }"
     >
       <p
-        class="font-semibold text-center mb-2 text-gray-500 transform duration-1000 opacity-0 translate-y-32"
+        class="font-semibold text-center mb-2 text-gray-500 transform duration-1000 opacity-0 translate-y-32 animate-pulse"
         data-class-in="translate-y-0 opacity-100"
         data-class-out="translate-y-32 opacity-0"
       >
@@ -44,13 +44,11 @@
             </label>
             <input
               v-model="MESSAGE.name"
+               @input="onInput()"
               class="appearance-none block text-black w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 outline-none"
               id="grid-first-name"
               type="text"
               placeholder="Your Name"
-              :class="{
-                'border border-red-600': MESSAGE_INVALID_OBJECT.name !== '',
-              }"
             />
             <p v-if="MESSAGE_INVALID_OBJECT.name !== ''" class="text-red-600">
               {{ MESSAGE_INVALID_OBJECT.name }}
@@ -69,13 +67,11 @@
             </label>
             <input
               v-model="MESSAGE.email"
+               @input="onInput()"
               class="appearance-none block w-full text-black outline-none bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
               id="grid-last-name"
               type="email"
               placeholder="Your Email"
-              :class="{
-                'border border-red-600': MESSAGE_INVALID_OBJECT.email !== '',
-              }"
             />
             <p v-if="MESSAGE_INVALID_OBJECT.email !== ''" class="text-red-600">
               {{ MESSAGE_INVALID_OBJECT.email }}
@@ -96,13 +92,11 @@
             </label>
             <input
               v-model="MESSAGE.subject"
+              @input="onInput()"
               class="appearance-none block text-black w-full outline-none bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
               id="grid-password"
               type="text"
               placeholder="Subject"
-              :class="{
-                'border border-red-600': MESSAGE_INVALID_OBJECT.subject !== '',
-              }"
             />
             <p
               v-if="MESSAGE_INVALID_OBJECT.subject !== ''"
@@ -126,13 +120,11 @@
             </label>
             <textarea
               v-model="MESSAGE.text"
+              @input="onInput()"
               class="appearance-none block text-black outline-none w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
               id="grid-password"
               type="text"
               placeholder="Message"
-              :class="{
-                'border border-red-600': MESSAGE_INVALID_OBJECT.text !== '',
-              }"
             />
             <p v-if="MESSAGE_INVALID_OBJECT.text !== ''" class="text-red-600">
               {{ MESSAGE_INVALID_OBJECT.text }}
@@ -190,7 +182,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["handleSendMessage"]),
+    ...mapActions(["handleSendMessage", "handleInput"]),
     loadAnimation() {
       Animasection.observeAll();
     },
@@ -200,14 +192,16 @@ export default {
     isDesktopDevice() {
       return isDesktop();
     },
+    onInput(){
+      this.handleInput()
+    },
     onSendMessage() {
       this.handleSendMessage();
     },
   },
   computed: {
     ...mapGetters(["BUTTON_SEND_STATUS"]),
-    ...mapGetters(["MESSAGE"]),
-    ...mapGetters(["MESSAGE_INVALID_OBJECT"]),
+    ...mapGetters(["MESSAGE", "MESSAGE_INVALID_OBJECT"]),
   },
 };
 </script>

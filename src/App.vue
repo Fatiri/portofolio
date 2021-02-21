@@ -1,9 +1,10 @@
 <template>
   <div id="app" class="font-poppins">
+  <project-detail/>
     <div id="nav">
       <nav-bar />
       <hero />
-    </div>
+    </div> 
     <skill />
     <service-client />
     <project/>
@@ -27,6 +28,7 @@ import ContactUs from "./views/ContactUs.vue";
 import FooterBar from "./components/FooterBar.vue";
 import ArrowScroll from "./components/ArrowScroll.vue";
 import Project from "./views/Project.vue"
+import ProjectDetail from "./views/ProjectDetail.vue"
 export default {
   name: "App",
   components: {
@@ -39,7 +41,8 @@ export default {
     ContactUs,
     FooterBar,
     ArrowScroll,
-    Project
+    Project,
+    ProjectDetail
   },
    methods: {
     isMobileDevice() {

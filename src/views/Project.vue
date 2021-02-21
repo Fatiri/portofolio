@@ -6,14 +6,14 @@
     data-class-out="translate-y-5 opacity-0"
   >
     <div class="lg:mt-8 md:mt-8 transition">
-      <p class="font-semibold text-center mb-2 text-gray-500">
+      <p class="font-semibold text-center mb-2 text-gray-500 animate-pulse">
         ACCOMPLISHMENTS
       </p>
       <p class="font-semibold text-center text-2xl text-white">Selected Projects</p>
 
       <div
         :class="{
-          'grid lg:grid-cols-1 md:grid-cols-1 gap-4 mt-10': isDesktopDevice(),
+          'grid lg:grid-cols-1 md:grid-cols-1 gap-4 mt-6': isDesktopDevice(),
           'grid grid-cols-1 gap-1  mt-10': isMobileDevice(),
         }"
       >
@@ -34,6 +34,7 @@
               }"
             >
               <div
+                @click="showModal()"
                 class="container h-auto lg:flex transform duration-1000 opacity-0 translate-y-32 hover:shadow-xl cursor-pointer"
                 data-class-in="translate-y-0 opacity-100"
                 data-class-out="translate-y-32 opacity-0"
@@ -120,7 +121,7 @@
 <script>
 import Animasection from "../utils/animation";
 import IconSvg from "../assets/svg/index.vue";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 import { isDesktop, isMobilePhone } from "../utils/device";
 import { Carousel, Slide } from "vue-carousel";
 
@@ -136,6 +137,7 @@ export default {
   },
 
   methods: {
+    ...mapActions(["showModalProjectDetail"]),
     loadAnimation() {
       Animasection.observeAll();
     },
@@ -145,6 +147,9 @@ export default {
     isDesktopDevice() {
       return isDesktop();
     },
+    showModal(){
+      this.showModalProjectDetail()
+    }
   },
   computed: {
     ...mapGetters(["SERVICE_CLIENT"]),

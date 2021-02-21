@@ -15,7 +15,7 @@
           <div :class="{ 'px-6 ': isMobileDevice() }">
             <div class="profile shadow-md"></div>
             <img
-              class="profile-image bounce"
+              class="profile-image bounce opacity-70 cursor-pointer"
               src="../assets/svg/me.png"
               alt="Ilham Fatiri"
             />
@@ -93,13 +93,13 @@
           </p>
 
           <div
-            class="-mx-3 flex cursor-pointer"
-            :class="{ 'mb-0': isMobileDevice(), 'mb-6': isDesktopDevice() }"
+            class="flex"
+            :class="{ 'mb-0 mt-5': isMobileDevice(), '-mx-3 mb-6': isDesktopDevice() }"
           >
             <div
               class="md:w-1/1 custome-download-icon px-3 mb-6 md:mb-0 underline ..."
             >
-              <icon-svg class="mt-6" name="download" width="28" height="28" />
+              <icon-svg class="mt-6 transform transition duration-500 hover:scale-125 cursor-pointer" name="download" width="28" height="28" />
             </div>
             <div class="md:w-1/2 px-3">
               <div class="text-white text-lg mt-6">Download CV</div>

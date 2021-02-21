@@ -10,7 +10,7 @@
       class="transition card-list-blur-custome pt-8"
       :class="{ 'mt-0': isMobileDevice(), 'mt-1': isDesktopDevice() }"
     >
-      <p class="font-semibold text-center mb-2 text-gray-500">skills & Tools</p>
+      <p class="font-semibold text-center mb-2 text-gray-500 animate-pulse">skills & Tools</p>
       <p class="font-semibold text-center text-2xl text-white">Skills & Tools</p>
       <div :class="{ 'mt-1': isMobileDevice(), 'mt-5': isDesktopDevice() }">
         <draggable
@@ -76,7 +76,7 @@
       </div>
       <div
         v-if="BUTTON_SHOW"
-        class="flex pt-2 justify-center shadow-sm ransform transition duration-500 hover:scale-125"
+        class="flex pt-2 justify-center shadow-sm transform transition duration-500 hover:scale-125"
       >
         <div @click="onChangeLessSkill()">
           <icon-svg

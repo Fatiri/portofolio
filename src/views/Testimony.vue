@@ -9,7 +9,7 @@
       class="transition card-list-blur-custome pt-8 grid justify-items-center"
       :class="{ 'mt-0': isMobileDevice(), 'mt-1': isDesktopDevice() }"
     >
-      <p class="font-semibold text-center mb-2 text-gray-500">TESTIMONIES</p>
+      <p class="font-semibold text-center mb-2 text-gray-500 animate-pulse">TESTIMONIES</p>
       <p class="font-semibold text-center text-2xl text-white mb-8">
         What team mate says about me?
       </p>

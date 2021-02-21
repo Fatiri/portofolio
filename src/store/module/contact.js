@@ -24,6 +24,11 @@ const state = {
 
 
 const actions = {
+    handleInput({ commit }) {
+        const validateResult = ValidateObjectDataMessage(state.dataMailJS.template_params)
+        const messageInvalidObject = validateResult.message
+        commit("SET_MESSAGE_INVALID_OBJECT", messageInvalidObject)
+    },
     async handleSendMessage({ commit }) {
         const validateResult = ValidateObjectDataMessage(state.dataMailJS.template_params)
         state.buttonSendStatus = true

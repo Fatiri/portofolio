@@ -2,7 +2,7 @@
   <div
     @click="scrollTop"
     v-show="visible"
-    class="float-bottom-to-top cursor-pointer"
+    class="float-bottom-to-top cursor-pointer transform transition duration-500 hover:scale-125"
   >
     <icon-svg
       class="mt-6 animate-bounce opacity-50"
@@ -44,7 +44,7 @@ export default {
 <style scoped>
 .float-bottom-to-top {
   position: fixed;
-  bottom: 6px;
+  bottom: 1px;
   right: 20px;
   cursor: pointer;
 }
